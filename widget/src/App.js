@@ -1,26 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import { HashRouter , Route } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
+import Home from './Home'
 import Camera from './Camera'
 import Geocoding from './Geocoding'
 
-function App() {
-  return (
-    <HashRouter  >
-      <div>
-        <Route exact path='/' component={Home} />
-        <Route path='/camera' component={Camera} />
-        <Route path='/geocoding' component={Geocoding} />
-      </div>
-    </HashRouter  >
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <HashRouter>
+        <div>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/camera' component={Camera} />
+            <Route path='/geocoding' component={Geocoding} />
+          </Switch>
+        </div>
+      </HashRouter  >
+    )
+  }
 }
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-    <p>Welcome to ようこそ</p>
-  </div>
-)
+
 
 
 export default App;

@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { HashRouter , Route } from 'react-router-dom'
+import Camera from './Camera'
+import Geocoding from './Geocoding'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter  >
+      <div>
+        <Route exact path='/' component={Home} />
+        <Route path='/camera' component={Camera} />
+        <Route path='/geocoding' component={Geocoding} />
+      </div>
+    </HashRouter  >
   );
 }
+const Home = () => (
+  <div>
+    <h2>Home</h2>
+    <p>Welcome to ようこそ</p>
+  </div>
+)
+
 
 export default App;

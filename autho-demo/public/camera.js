@@ -1,20 +1,20 @@
 const medias = {
-  audio: false,
-  video: {
-    facingMode: "user"
-  }
+    audio: false,
+    video: {
+        facingMode: "user"
+    }
 };
 const video = document.getElementById("video");
 const promise = navigator.mediaDevices.getUserMedia(medias);
 
 promise.then(successCallback)
-       .catch(errorCallback);
+    .catch(errorCallback);
 
 
 function successCallback(stream) {
-  video.srcObject = stream;
+    video.srcObject = stream;
 };
 
 function errorCallback(err) {
-  alert(err);
+    alert(err);
 };

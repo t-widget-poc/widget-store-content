@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import { HashRouter, Route, Switch } from 'react-router-dom'
-import Home from './Home'
 import Camera from './Camera'
 import Geocoding from './Geocoding'
 import Auth from './Auth/Auth'
+import FrontCamera from './Camera/FrontCamera'
+
 
 class App extends React.Component {
   render() {
@@ -13,11 +14,11 @@ class App extends React.Component {
         <div>
           <Switch>
             <Route exact path='/' component={Auth} />
-            <Route path='/camera' component={Camera} />
+            <Route path='/camera' component={FrontCamera} />
             <Route path='/geocoding' component={Geocoding} />
           </Switch>
         </div>
-      </HashRouter  >
+      </HashRouter>
     )
   }
 }

@@ -1,10 +1,21 @@
 import React from 'react'
+import Webcam from "react-webcam";
 
-const Camera = () => (
-    <div>
-        <h2>Camera</h2>
-        <p>カメラを起動するページです。</p>
-    </div>
-)
+class Camera extends React.Component {
+    render() {
+        const videoConstraints = {
+            video: {
+                width: { ideal: 1280 },
+                height: { ideal: 720 }
+            },
+            facingMode: "user"
+        };
+        return (
+            <>
+                <Webcam videoConstraints={videoConstraints} />
+            </>
+        )
+    }
+}
 
 export default Camera;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { HashRouter, Route, Switch } from 'react-router-dom'
-import Geocoding from './Geocoding'
+import Geocoding from './GeoCoding/Geocoding'
 import Auth from './Auth/Auth'
 import FrontCamera from './Camera/FrontCamera'
 

@@ -1,12 +1,13 @@
 import React from 'react'
-import Video from './Video';
+import Camera from './Camera';
 import CameraScript from './CameraScript';
+
 
 class FrontCamera extends React.Component {
     render() {
         return (
             <>
-                <Video />
+                <Camera />
                 <CameraScript />
             </>
         )

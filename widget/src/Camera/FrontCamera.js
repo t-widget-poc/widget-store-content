@@ -1,13 +1,13 @@
 import React from 'react'
-import Webcam from "react-webcam";
-import Video from './Video';
-import CameraScript from './CameraScriptpt';
+import Camera from './Camera';
+import CameraScript from './CameraScript';
+
 
 class FrontCamera extends React.Component {
     render() {
         return (
             <>
-                <div><video id="video" autoPlay playsinline></video></div>
+                <Camera />
                 <CameraScript />
             </>
         )

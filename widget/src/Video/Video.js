@@ -7,7 +7,6 @@ class Video extends React.Component {
                 <video id="video" autoPlay playsInline></video>
             </div>
         )
-        
     }
 }
 

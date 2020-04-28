@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import { HashRouter, Route, Switch } from 'react-router-dom'
 import Geocoding from './GeoCoding/Geocoding'
 import Auth from './Auth/Auth'
-import FrontCamera from './Camera/FrontCamera'
+import Camera from './Camera/Camera'
 
 
 class App extends React.Component {
@@ -13,7 +13,7 @@ class App extends React.Component {
         <div>
           <Switch>
             <Route exact path='/' component={Auth} />
-            <Route path='/camera' component={FrontCamera} />
+            <Route path='/camera' component={Camera} />
             <Route path='/geocoding' component={Geocoding} />
           </Switch>
         </div>
